@@ -297,7 +297,7 @@ watch{
 此部分接口依赖开发者密钥和遵循数据规则。
 
 ###同步用户
--   路径：/api/sync/syncUserInfo：
+-   路径：/api/sync/saveUsers：
 -   参数：
     ```
     {
@@ -329,13 +329,13 @@ watch{
  
 
 ###同步任务模版
--   路径：/api/sync/saveStandardCalorieInfo ：
+-   路径：/api/sync/saveTasks ：
 -   参数：
     ```
     {
-      "cardNo":"任务id",
+      "taskId":"任务id",
       "title":"任务名称",
-      "txt":"任务文件"
+      "taskFile":"任务文件"
     }
     ```
     
@@ -361,9 +361,8 @@ watch{
 
 
 
-
 ###同步多媒体资源
--   路径：/api/sync/syncResource ：
+-   路径：/api/sync/saveResource ：
 -   参数：
     ```
     {
@@ -472,4 +471,107 @@ watch{
     }
     ```
 
+###增加一个智能眼镜设备
+-   路径：/api/sync/addDevice ：
+-   参数：
+    ```
+    {
+      "data":"具体资源数据放到body data"
+      "key":"开发者密钥"
+    }
+    ```
+    
+-   data内容规则：
+    ```
+    "data":{
+        "devCode": "设备ID编码",
+        "devName": "设备名称"
+    }
+    ```
+    
+-   响应：
 
+    ```
+    {
+      "code":200
+    }
+    ```
+
+###增加一个用户
+-   路径：/api/sync/addUser ：
+-   参数：
+    ```
+    {
+      "message":"具体资源数据放到body data"
+      "key":"开发者密钥"
+    }
+    ```
+    
+-   data内容规则：
+    ```
+    "data":{
+        "name": "用户姓名",
+        "phone": "用户手机号码"
+    }
+    ```
+    
+-   响应：
+
+    ```
+    {
+      "code":200
+    }
+    ```
+    
+###删除某个设备
+-   路径：/api/sync/deleteDevice ：
+-   参数：
+    ```
+    {
+      "deviceCode":"设备id编码"
+      "key":"开发者密钥"
+    }
+    ```
+    
+-   响应：
+
+    ```
+    {
+      "code":200
+    }
+    ```
+    
+###删除用户
+-   路径：/api/sync/deleteUser ：
+-   参数：
+    ```
+    {
+      "phone":"用户手机号"
+      "key":"开发者密钥"
+    }
+    ```
+ 
+-   响应：
+
+    ```
+    {
+      "code":200
+    }
+    ```
+    
+###获取用户列表
+-   路径：/api/sync/getUsers ：
+-   参数：
+    ```
+    {
+      "key":"开发者密钥"
+    }
+    ```
+ 
+-   响应：
+
+    ```
+    {
+      "code":200
+    }
+    ```
