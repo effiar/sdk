@@ -6,7 +6,7 @@
 
 所有请求均为POST，返回值code=200或1为成功。
 
-###发送验证码
+### 发送验证码
 -   路径：/api/customer/login/sendLoginSms ：
 -   参数：
 
@@ -16,7 +16,7 @@
     }
     ```
     
-###用户登录
+### 用户登录
 -   路径：/api/customer/login/login ：
 -   参数：
     ```
@@ -34,7 +34,7 @@
     }
     ```
     
-###获取个人信息
+### 获取个人信息
 -   路径：/api/customer/remote/getStaffNameHead：
 -   参数(header)：
     ```
@@ -55,7 +55,7 @@
     }
     ```
 
-###获取智能眼镜列表
+### 获取智能眼镜列表
 -   路径：/api/customer/remote/getGlassesList：
 -   header：
     ```
@@ -115,7 +115,7 @@
 }
     ```
 
-###获取房间列表
+### 获取房间列表
 -   路径：/api/customer/remote/underwayVideoRoomList：
 -   header：
     ```
@@ -179,7 +179,7 @@
 }
     ```
 
-###发送消息
+### 发送消息
 -   路径：/api/message/send：
 -   Header：
     ```
@@ -207,7 +207,7 @@
     ```
 
 
-###开始接入依赖包
+### 开始接入依赖包
 
 * 1 、引入effiar_im.js、jquery.js、jquery.json-2.3.min.js、layim.config.js、layui.js、message.js、replyboby.js、sentbody.js videocall.js文件。
 * 2、 在store目录新建index.js，内容如下：
@@ -268,7 +268,7 @@ watch{
 * 7、当接受到Room时，或者三个room值，并跳转到音视频界面。
 
 
-###接入音视频画面
+### 接入音视频画面
 * 1、在index.html 引入videocall.js文件。
 * 2、初始化音视频对象，并输入roomId，roomToken，调用joinroom()。
 * 3、等待成员列表回调，创建video标签，并将成员姓名为“Glass”的视频画面push到该标签。
@@ -296,7 +296,7 @@ watch{
 ## 自定义系统接口
 此部分接口依赖开发者密钥和遵循数据规则。
 
-###同步用户
+### 同步用户
 -   路径：/api/sync/saveUsers：
 -   参数：
 ```
@@ -329,7 +329,7 @@ watch{
  
 
 
-###同步任务模版
+### 同步任务模版
 -   路径：/api/sync/saveTasks ：
 -   参数：
     ```
@@ -362,7 +362,7 @@ watch{
 
 
 
-###同步多媒体资源
+### 同步多媒体资源
 -   路径：/api/sync/saveResource ：
 -   参数：
     ```
@@ -391,7 +391,7 @@ watch{
     ```
 
 
-###同步任务结果数据
+### 同步任务结果数据
 -   路径：/api/由开发在自己系统便携同步接口 ：
 -   参数：
     ```
@@ -442,7 +442,7 @@ watch{
 
 
 
-###推送消息
+### 推送消息
 -   路径：/api/sync/pushMessage ：
 -   参数：
     ```
@@ -472,7 +472,7 @@ watch{
     }
     ```
 
-###增加一个智能眼镜设备
+### 增加一个智能眼镜设备
 -   路径：/api/sync/addDevice ：
 -   参数：
     ```
@@ -498,7 +498,7 @@ watch{
     }
     ```
 
-###增加一个用户
+### 增加一个用户
 -   路径：/api/sync/addUser ：
 -   参数：
     ```
@@ -524,7 +524,7 @@ watch{
     }
     ```
     
-###删除某个设备
+### 删除某个设备
 -   路径：/api/sync/deleteDevice ：
 -   参数：
     ```
@@ -560,7 +560,7 @@ watch{
     }
     ```
     
-###获取用户列表
+### 获取用户列表
 -   路径：/api/sync/getUsers ：
 -   参数：
     ```
